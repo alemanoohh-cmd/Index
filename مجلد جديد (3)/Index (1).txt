@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>التحام | منصة التعلم الصناعي</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  margin: 0;
+  background: #f4f6f8;
+}
+header {
+  background: #0a3d62;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+nav {
+  background: #1e6091;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+nav button:hover {
+  background: #168aad;
+}
+section {
+  display: none;
+  padding: 30px;
+}
+section.active {
+  display: block;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+.quiz button {
+  margin-top: 10px;
+}
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>التحام</h1>
+  <p>منصة تفاعلية للتعلم الصناعي الذكي</p>
+</header>
+
+<nav>
+  <button onclick="show('home')">الرئيسية</button>
+  <button onclick="show('what')">ما هو اللحام</button>
+  <button onclick="show('types')">أنواع اللحام</button>
+  <button onclick="show('uses')">الاستخدامات</button>
+  <button onclick="show('safety')">السلامة</button>
+  <button onclick="show('quiz')">اختبر نفسك</button>
+</nav>
+
+<section id="home" class="active">
+  <div class="card">
+    <h2>مرحبًا بك في التحام</h2>
+    <p>مشروع تعليمي رقمي يعرّفك بعالم اللحام بطريقة آمنة وتفاعلية داخل المدرسة.</p>
+  </div>
+</section>
+
+<section id="what">
+  <div class="card">
+    <h2>ما هو اللحام؟</h2>
+    <p>اللحام هو عملية صناعية يتم فيها ربط المعادن باستخدام الحرارة أو الضغط لتكوين قطعة قوية.</p>
+  </div>
+</section>
+
+<section id="types">
+  <div class="card">
+    <h2>أنواع اللحام</h2>
+    <ul>
+      <li>اللحام بالقوس الكهربائي</li>
+      <li>اللحام بالغاز</li>
+      <li>لحام النقاط</li>
+    </ul>
+  </div>
+</section>
+
+<section id="uses">
+  <div class="card">
+    <h2>استخدامات اللحام</h2>
+    <p>يستخدم اللحام في السيارات، الجسور، الأبواب المعدنية، والأدوات المنزلية.</p>
+  </div>
+</section>
+
+<section id="safety">
+  <div class="card">
+    <h2>السلامة المهنية</h2>
+    <ul>
+      <li>القناع الواقي</li>
+      <li>القفازات</li>
+      <li>النظارات الواقية</li>
+      <li>الملابس الواقية</li>
+    </ul>
+  </div>
+</section>
+
+<section id="quiz">
+  <div class="card quiz">
+    <h2>اختبر نفسك</h2>
+    <p>أي نوع من اللحام يستخدم في صناعة السيارات؟</p>
+    <button onclick="alert('إجابة صحيحة ✔️')">لحام النقاط</button>
+    <button onclick="alert('إجابة غير صحيحة ❌')">اللحام بالغاز</button>
+  </div>
+</section>
+
+<footer>
+  <p>مشروع التحام – هاكثون التعليم الرقمي</p>
+</footer>
+
+<script>
+function show(id) {
+  document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
